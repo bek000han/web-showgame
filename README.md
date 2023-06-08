@@ -1,13 +1,12 @@
-# 'Who Wants to be a Millionaire?' Flask Quiz App CS50x
-### **Video Demo**:  https://youtu.be/3naBNU8C3MA
-## **Description**:
+# **'Who Wants to be a Millionaire?' Flask Quiz App CS50x**
+#### **Video Demo**:  https://youtu.be/3naBNU8C3MA
+### **Description**:
 
 Hello, this is bek000han from Kazakhstan and here is my CS50x final project I have made. This is a web-based quiz game inspired by the iconic 'Who Wants to be a Millionaire' trivia game show and strives to be a faithful recreation. The application was developed using Flask and SQLite, written mainly in Python and some Javascript, and uses a number of libraries to provide additional utility.
 
 The app lets users create their own account, play the classic quiz game and track their progress, and of course compete with other users on a global leaderboard. The game consists of multiple stages (12 questions) with increasing difficulty levels for the questions as the user progresses. At each stage, the user is presented with a question and multiple-choice answers. The user needs to select the correct answer continue to the next stage. If the user fails or reaches the million dollar question, they are rewarded their prize pool, which is saved onto the leaderboard for all to see.
 
-&nbsp;
-## **Installation**:
+### **Installation**:
 
 - Clone the repository:
 > $ git clone <repository_url>
@@ -22,8 +21,7 @@ The app lets users create their own account, play the classic quiz game and trac
 
 > Ctrl + left click the flask provided hyperlink
 
-&nbsp;
-## **Play Instructions**:
+### **Play Instructions**:
 
 * Register/Login
     * Register an account by clicking on the "Register" link.
@@ -48,7 +46,7 @@ The app lets users create their own account, play the classic quiz game and trac
     - The prize pool is added to your total winnings on the leaderboard.
     - You can choose to play again, go back to the main menu, or log out.
 
-## **Present Issues**:
+### **Present Issues**:
 
 - The application currently does not have robust error handling or validation for user inputs.
 Invalid inputs may cause unexpected behavior.
@@ -58,7 +56,7 @@ Invalid inputs may cause unexpected behavior.
 - The application lacks comprehensive unit tests and could benefit from a testing framework for automated testing.
 - Some unsafe SQL queries may be present in the code, and must be validated at a later date.
 
-## **Future Plans**:
+### **Future Plans**:
 
 - Implement additional features such as lifelines to provide hints or assistance during gameplay.
     - Ask the audience
@@ -71,10 +69,10 @@ Invalid inputs may cause unexpected behavior.
     - x400 level 1 questions
     - x200 level 3 questions
 
-## **Contributing**:
+### **Contributing**:
 
 Contributions to the Quiz Game project are welcome and encouraged! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
 
-## **License**:
+### **License**:
 
 The Quiz Game project is licensed under the MIT License.
