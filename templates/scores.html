@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    High Scores
+{% endblock %}
+
+{% block main %}
+
+    <div class="exitgame">
+        <form action="/scores" method="post">
+            <input type="hidden" value="exitgame" name="exitgame">
+            <button type="submit"> <img src="static/exitgame.png" style="width:2.5vw;"></button>
+        </form>
+    </div>
+
+    <audio autoplay loop>
+        <source src="static/resultstheme.mp3" type="audio/mpeg">
+    </audio>
+
+    <h1 class="scoresh">
+        Leaderboard
+    </h1>
+    <table class="table table-striped table-hover bdr" style="margin-top: 2vw;">
+        <thead>
+            <tr>
+                <th scope="col" id="tableheader">Rank</th>
+                <th scope="col" id="tableheader">Username</th>
+                <th scope="col" id="tableheader">Money Won</th>
+                <th scope="col" id="tableheader">Games Played</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <th id="tabledata"> {{ loop.index }} </th>
+                    <td id="tabledata"> {{ user["username"] }} </td>
+                    <td id="tabledata"> {{ "${:,}".format(user["money"]) }} </td>
+                    <td id="tabledata"> {{ user["count"] }} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

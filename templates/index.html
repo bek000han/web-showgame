@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main Menu
+{% endblock %}
+
+{% block main %}
+    <audio autoplay loop>
+        <source src="static/mainthemequiz.mp3" type="audio/mpeg">
+    </audio>
+    <div class="indexmenu">
+        <img src="static/logoquiz.png" class="logoimagemenu">
+        <form class="menu" method="post">
+            <div class="mb-2">
+                <input class="btn btn-primary btn-lg" type="submit" value="New Game" name="button1">
+            </div>
+            <div class="mb-2">
+                <input class="btn btn-primary btn-lg" type="submit" value="High Scores" name="button2">
+            </div>
+            <div class="mb-2">
+                <input class="btn btn-primary btn-lg" type="submit" value="Log Out" name="button3">
+            </div>
+        </form>
+    </div>
+{% endblock %}

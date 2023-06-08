@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" value="{{ stage }}">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="exampleModalLabel">Game Progress</div>
+                </div>
+                <div class="modal-body">
+                    {% for i in range(1, 13, 1) %}
+                        {% if stage > i-1 %}
+                            <div class="modalobject" id="modalobject2">
+                                <div style="font-weight: bold;"> {{ i }} </div>
+                                <div> {{ "${:,}".format(money[i]) }} </div>
+                            </div>
+                        {% elif i == stage + 1 %}
+                            <div class="modalobject" id="modalobject3">
+                                <div style="font-weight: bold;"> {{ i }} </div>
+                                <div> {{ "${:,}".format(money[i]) }} </div>
+                            </div>
+                        {% else %}
+                            <div class="modalobject">
+                                <div style="font-weight: bold;"> {{ i }} </div>
+                                <div> {{ "${:,}".format(money[i]) }} </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block title %}
+    In-Game
+{% endblock %}
+
+{% block main %}
+    <div class="exitgame">
+        <form action="/game" method="post">
+            <input type="hidden" value="exitgame" name="exitgame">
+            <button type="submit"> <img src="static/exitgame.png" style="width:2.5vw;"></button>
+        </form>
+    </div>
+
+    <audio id="selectsound" preload="auto">
+        <source src="static/selectanswer.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="losesound" preload="auto">
+        <source src="static/losequiz.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="winsound" preload="auto">
+        <source src="static/answercorrect.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="winsoundhard" preload="auto">
+        <source src="static/correctharder.mp3" type="audio/mpeg">
+    </audio>
+
+    {% if stage == 1 %}
+        <audio id="gameaudio" preload="auto" loop>
+            <source src="static/difficultyzero.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="gameaudioone" autoplay onended="playGameAudioOne()">
+            <source src="static/startgameaudio.mp3" type="audio/mpeg">
+        </audio>
+    {% elif (stage > 1) and (6 > stage) %}
+        <audio id="gameaudio" autoplay loop>
+            <source src="static/difficultyzero.mp3" type="audio/mpeg">
+        </audio>
+    {% elif (stage > 5) and (10 > stage) %}
+        <audio id="gameaudio" autoplay loop>
+            <source src="static/difficultyone.mp3" type="audio/mpeg">
+        </audio>
+    {% else %}
+        <audio id="gameaudio" autoplay loop>
+            <source src="static/difficultytwo.mp3" type="audio/mpeg">
+        </audio>
+    {% endif %}
+
+    <div class="logogame">
+        <img src="static/logoquiz.png" class="logoimage">
+    </div>
+
+    <div class="questionbox">
+        <div class="money">
+            {{ "${:,}".format(currentmoney) }}
+        </div>
+        <div class="stage" id="stage" value="{{ stage }}">
+            {{ stage }} / 12
+        </div>
+        {{ questions[0]["questiontext"] }}
+    </div>
+
+    <div class="answersbox">
+        <form action="/game" method="post" style="">
+            <input value="{{ answers[0]["correct"] }}" type="hidden" name="answer">
+            <button type="submit" class="btngame" id="answer0" value="{{ answers[0]["correct"] }}"
+            onclick="buttonColor(this.id); playSelectAudio();">{{ answers[0]["answer"] }} </button>
+        </form>
+
+        <form action="/game" method="post">
+            <input value="{{ answers[1]["correct"] }}" type="hidden" name="answer">
+            <button type="submit" class="btngame" id="answer1" value="{{ answers[1]["correct"] }}"
+            onclick="buttonColor(this.id); playSelectAudio();">{{ answers[1]["answer"] }} </button>
+        </form>
+
+        <form action="/game" method="post">
+            <input value="{{ answers[2]["correct"] }}" type="hidden" name="answer">
+            <button type="submit" class="btngame" id="answer2" value="{{ answers[2]["correct"] }}"
+            onclick="buttonColor(this.id); playSelectAudio();">{{ answers[2]["answer"] }} </button>
+        </form>
+
+        <form action="/game" method="post">
+            <input value="{{ answers[3]["correct"] }}" type="hidden" name="answer">
+            <button type="submit" class="btngame" id="answer3" value="{{ answers[3]["correct"] }}"
+            onclick="buttonColor(this.id); playSelectAudio();">{{ answers[3]["answer"] }} </button>
+        </form>
+    </div>
+
+    <button type="button" class=" btn rounded-3 add-new-client-btn" id="" data-bs-toggle="modal"
+    data-bs-target="#exampleModal" style="visibility: hidden;"></button>
+
+{% endblock %}

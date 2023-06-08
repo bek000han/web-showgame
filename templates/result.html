@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Game Finish
+{% endblock %}
+
+{% block main %}
+    <script src="/static/confetti.js"></script>
+    {% if prize > 0 and 1000000 > prize %}
+        <audio autoplay loop>
+            <source src="static/resultstheme.mp3" type="audio/mpeg">
+        </audio>
+        <div class="resultbox" style="display: flex; flex-direction: column;">
+            <script id="confetti.js">
+                startConfetti();
+            </script>
+            <p>Well done!</p>
+            <p style="color: #ffd700; margin-top: -2vw;">
+                <span style="color:white;">You won </span>{{ "${:,}".format(prize) }}
+                <span style="color:white;"> !</span>
+            </p>
+        </div>
+    {% elif prize == 1000000 %}
+        <audio autoplay loop>
+            <source src="static/ultrawin.mp3" type="audio/mpeg">
+        </audio>
+        <div class="resultbox" style="display: flex; flex-direction: column;">
+            <script id="confetti.js">
+                startConfetti();
+            </script>
+            <p>You're a Millionaire!</p>
+            <p style="color: #ffd700; margin-top: -2vw;">
+                <span style="color:white;">You won </span>{{ "${:,}".format(prize) }}
+                <span style="color:white;"> !</span>
+            </p>
+        </div>
+    {% else %}
+        <div class="resultbox">
+            Unlucky! <br>
+            Better luck next time!
+        </div>
+    {% endif %}
+
+    <form class="resultsbox" method="post">
+        <div class="mb-2">
+            <input class="btn btn-primary btn-lg" type="submit" value="Play Again" name="button1" id="resultsbutton">
+        </div>
+        <div class="mb-2">
+            <input class="btn btn-primary btn-lg" type="submit" value="Back to Menu" name="button2" id="resultsbutton">
+        </div>
+        <div class="mb-2">
+            <input class="btn btn-primary btn-lg" type="submit" value="Log Out" name="button3" id="resultsbutton">
+        </div>
+    </form>
+
+
+{% endblock %}

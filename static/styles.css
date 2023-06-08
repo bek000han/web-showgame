@@ -1,0 +1,346 @@
+html, main {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    position: absolute;
+}
+
+body {
+    background-image: url('/static/backgroundquiz.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    text-align: right;
+    margin-right: 1%;
+    color: white;
+    font-size: 0.75rem;
+}
+
+header {
+    font-family: "Lucida Console";
+    position: fixed;
+    text-align: right;
+    color: white;
+    font-size: 0.65rem;
+    top: 6px;
+    right: 10px;
+    padding: 0.3vw 0vw 0vw 0.3vw;
+}
+
+.exitgame {
+    left: 6px;
+    position: fixed;
+    top: 6px;
+    left: 10px;
+    padding: 0.3vw 0vw 0vw 0.3vw;
+}
+
+.menu {
+    display: inline-block;
+    flex-direction: column;
+    width: 33%;
+    height: auto;
+    padding: 5vw 6vw 3vw 4vw;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+.btn.btn-primary.btn-lg {
+    font-size: 1.3vw;
+    display: block;
+    flex: 1;
+    text-align: center;
+    width: 100%;
+    background-color: #1c1565;
+    border: 1px solid white;
+}
+
+.btn.btn-primary.btn-lg:hover {
+    background-color: #0062ab;
+}
+
+.logo {
+    height: 20vw;
+    display: block;
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 22vw;
+}
+
+.indexmenu {
+    padding-top: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.logoimage {
+    width: 20vw;
+    height: auto;
+}
+
+.logoimagemenu {
+    width: 32vw;
+    height: auto;
+    margin-top: 1vw;
+}
+
+.logogame {
+    padding-top: 1vw;
+}
+
+.questionbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    width: 100%;
+    height: 18%;
+    color: white;
+    background-color: #1c1565;
+    font-family: Century Gothic;
+    font-weight: bold;
+    font-size: 2vw;
+    border: white 1px solid;
+    position: relative;
+}
+
+.money {
+    font-size: 1.6vw;
+    font-family: Arial;
+    color: white;
+    font-weight: 500;
+    position: absolute;
+    top: 0%;
+    margin-top: -1.4vw;
+    background-color: #FFAA1D;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    padding: 0.2rem 4rem 0.2rem 4rem;
+    border: 1px solid white;
+    border-radius: 5vw;
+}
+
+.stage {
+    font-size: 1.2vw;
+    color: white;
+    position: absolute;
+    top: -1%;
+    margin-top: -0.8vw;
+    left: 3%;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 5vw;
+    border: 1px solid white;
+}
+
+.answersbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 15%;
+    grid-column-gap: 1%;
+    max-width: 100%;
+    height: auto;
+    color: white;
+    padding: 1vw;
+    padding-top: 2vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pillar {
+    position: relative;
+    top:50%;
+    height: 5px;
+    background-color: gray;
+    border: 1px solid white;
+    z-index: -1;
+}
+
+.btngame {
+    font-family: Century Gothic;
+    font-size: 1.2vw;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1c1565;
+    padding: 1vw 2vw 1vw 2vw;
+    border-radius: 10rem;
+    border: white 1px solid;
+    width: 100%;
+}
+
+.btngame:hover {
+    background-color: #0062ab;
+    font-family: Century Gothic;
+    font-size: 1.2vw;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 1vw 2vw 1vw 2vw;
+    border-radius: 10rem;
+    border: white 1px solid;
+    width: 100%;
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 5px;
+    max-width: 100%;
+    background-color: #1c1565;
+    color: white;
+    padding-bottom: 2vw;
+    border-radius: 0vw 0vw 4vw 4vw;
+}
+
+.modal-content {
+    border-radius: 4vw;
+    border: 1px solid white;
+}
+
+.modalobject {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.6vw;
+    font-family: Century Gothic;
+    width: 50%;
+    border: white 1px solid;
+    border-radius: 8vw;
+    background-color: #0062ab;
+    padding: 0px 10px 0px 10px;
+}
+
+#modalobject2 {
+    background: radial-gradient(circle at center,
+                chartreuse, lime, limegreen), 100%;
+}
+
+#modalobject3 {
+    border: 4px solid orange;
+}
+
+
+.arrow {
+    position: relative;
+    height: 1vw;
+    width: auto;
+    top: 0%;
+    right: 0%;
+}
+
+.modal-header {
+    border-radius: 4vw 4vw 0vw 0vw;
+    background-color: #182693;
+    font-size: 2.2vw;
+    font-weight: bold;
+}
+
+.modal-title {
+    color: white;
+    margin: auto;
+}
+
+.resultbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13vw;
+    width: 100%;
+    height: 30%;
+    color: white;
+    background-color: #1c1565;
+    font-family: Century Gothic;
+    font-weight: bold;
+    font-size: 3.6vw;
+    border: white 1px solid;
+}
+
+.resultsbox {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2vw;
+    max-width: 60%;
+    height: auto;
+    color: white;
+    padding: 1vw;
+    margin: 0 auto;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.table.table-striped.table-hover {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #00308F;
+    color: white;
+    border: white 1px solid;
+}
+
+.scoresh {
+    margin-top: 1.5vw;
+    color: orange;
+    font-family: Century Gothic;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 42%;
+    text-decoration: underline;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+tr {
+    border-bottom: none;
+}
+
+
+#tabledata {
+    color: white;
+}
+
+#tableheader {
+    color: orange;
+    font-weight: bold;
+}
+
+thead {
+    background-color: #33006F;
+}
+
+#confetti-canvas {
+    position: relative;
+    top: 0%;
+}
+
+a {
+    color: orange;
+    font-weight: 18px;
+}
+
+.newaccount {
+    margin-top: 15px;
+    color: white;
+}
+
+#alert {
+    width: 20%;
+}
