@@ -13,6 +13,8 @@ The app lets users create their own account, play the classic quiz game and trac
 > $ git clone <repository_url>
 - Change to the project directory:
 > $ cd quiz-game
+
+> Feel free to clear all sessions
 - Install the required dependencies using pip:
 > $ pip install Flask cs50
 - Run the Flask application:
