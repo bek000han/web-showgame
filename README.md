@@ -2,9 +2,9 @@
 #### **Video Demo**:  https://youtu.be/3naBNU8C3MA
 ### **Description**:
 
-Hello, this is bek000han from Kazakhstan and here is my CS50x final project I have made. This is a web-based quiz game inspired by the iconic 'Who Wants to be a Millionaire' trivia game show and strives to be a faithful recreation. The application was developed using Flask and SQLite, written mainly in Python and some Javascript, and uses a number of libraries to provide additional utility.
+Hello, this is bek000han from Kazakhstan and here is my CS50x final project I have made. This is a web-based quiz game inspired by the iconic 'Who Wants to be a Millionaire' trivia game show and strives to be a faithful recreation. The application was developed using Flask and SQLite; backend written mainly in Python with  the frontend developed in HTML/CSS/JS and Bootstrap, and I've used a number of libraries to provide additional utility.
 
-The app lets users create their own account, play the classic quiz game and track their progress, and of course compete with other users on a global leaderboard. The game consists of multiple stages (12 questions) with increasing difficulty levels for the questions as the user progresses. At each stage, the user is presented with a question and multiple-choice answers. The user needs to select the correct answer continue to the next stage. If the user fails or reaches the million dollar question, they are rewarded their prize pool, which is saved onto the leaderboard for all to see.
+The app lets users create their own account, play the game, track their progress, and compete with other users on a global leaderboard. The game follows the original format of the quiz show, consisting of multiple stages (12 questions) with increasing difficulty levels for the questions as the user progresses. At each stage, the user is presented with a question and multiple-choice answers. The user needs to select the correct answer continue to the next stage. If the user fails or reaches the million dollar question, they are rewarded their prize pool, which is saved onto the leaderboard for all to see.
 
 ### **Installation**:
 
@@ -35,7 +35,6 @@ The app lets users create their own account, play the classic quiz game and trac
     - "High Scores" displays the top 10 users with the highest amount of money earned.
     - "Log Out" logs out the current user and redirects to the login page.
 
-&nbsp;
 - Quiz Game:
     - When you start a new game, you will be presented with a series of questions.
     - Select the correct answer to progress to the next stage and earn money.
