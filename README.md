@@ -19,7 +19,7 @@ The app lets users create their own account, play the game, track their progress
 - Run the Flask application:
 > $ flask run
 
-> Ctrl + left click the flask provided hyperlink
+> Ctrl + left click the flask-provided hyperlink
 
 ### **Play Instructions**:
 
