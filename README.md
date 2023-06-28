@@ -7,7 +7,7 @@ Hello, this is bek000han from Kazakhstan and here is my CS50x final project I ha
 The app lets users create their own account, play the game, track their progress, and compete with other users on a global leaderboard. The game follows the original format of the quiz show, consisting of multiple stages (12 questions) with increasing difficulty levels for the questions as the user progresses. At each stage, the user is presented with a question and multiple-choice answers. The user needs to select the correct answer continue to the next stage. If the user fails or reaches the million dollar question, they are rewarded their prize pool, which is saved onto the leaderboard for all to see.
 
 ### **Installation**:
-
+To run the quiz website locally, follow these steps:
 - Clone the repository:
 > $ git clone <repository_url>
 - Change to the project directory:
